@@ -1,16 +1,21 @@
 body {
-  background-image: url(https://wallpapersmug.com/download/1920x1080/35bde1/sunny-day-desert-landscape.jpg);
+  background-image: url(https://images.unsplash.com/photo-1593281796622-1de5647e871e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8eWVsbG93JTIwbW91bnRhaW58ZW58MHx8MHx8&w=1000&q=80);
   background-size: 100%;
 }
 h1 {
   text-align: center;
   font-family: "Courier New", Courier, monospace;
-  font-size: 55px;
-  color: rgb(198, 135, 0);
+  font-size: 80px;
+  color: rgb(0, 0, 96);
 }
-p {
+.text {
   text-align: center;
+  margin-top: 1.5px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-size: 30px;
+}
+.container {
+  background: rgba(76, 175, 173, 0.3);
+  padding: auto;
 }
