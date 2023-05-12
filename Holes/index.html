@@ -3,10 +3,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Holes Play</title>
     <link rel="stylesheet" href="D:\VS Projects\Holes\Styles\index.css" />
-    <script src="C:\Users\MOHAMED\OneDrive\Desktop\Holes\Holes\Holes\Scripts\index.js "></script>
+    <style>
+      .dropbtn {
+        background-color: purple;
+        border-radius: 10px;
+        color: white;
+        padding: 16px;
+        font-size: 26px;
+        font-family: 'Courier New', Courier, monospace;
+        border: none;
+        cursor: pointer;
+      }
+
+      .dropbtn:hover,
+      .dropbtn:focus {
+        background-color: purple;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: cyan;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown a:hover {
+        background-color: #ddd;
+      }
+
+      .show {
+        display: block;
+      }
+    </style>
   </head>
   <body>
     <img
@@ -23,7 +70,17 @@
         <br />
         <br />
         <b>
-          <a href="Casting.html">Casting</a>
+          <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Scenes</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="Scene_1.html">Scene 1</a>
+              <a href="Scene_2.html">Scene 2</a>
+              <a href="Scene_3.html">Scene 3</a>
+              <a href="Scene_4.html">Scene 4</a>
+              <a href="Scene_5.html">Scene 5</a>
+              <a href="Scene_6.html">Scene 6</a>
+            </div>
+          </div>
           <br />
           <br />
           <br />
@@ -43,16 +100,29 @@
           <br />
           <br />
           <br />
-          <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-            <div id="myDropdown" class="dropdown-content">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
-            </div>
-          </div>
+          <a href="Casting.html">Casting</a>
         </b>
-      </div>
-    </div>
+
+    <script>
+      /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function (event) {
+        if (!event.target.matches(".dropbtn")) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains("show")) {
+              openDropdown.classList.remove("show");
+            }
+          }
+        }
+      };
+    </script>
   </body>
 </html>
