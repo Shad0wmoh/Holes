@@ -106,7 +106,7 @@ body {
 }
 .img-text {
   float: left;
-  margin-left: 0.001px;
+  margin-left: 0.01px;
   margin-top: 20px;
   padding-left: 20px;
 }

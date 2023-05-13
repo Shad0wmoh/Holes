@@ -100,7 +100,7 @@ body {
 }
 .img {
   float: left;
-  margin-right: 0.01px;
+  margin-right: 0.001%;
   margin-left: 150px;
   margin-top: 50px;
 }
